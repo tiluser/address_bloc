@@ -38,6 +38,6 @@ class AddressBook
    
 end
 
-a = AddressBook.new
-a.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
-a.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+#a = AddressBook.new
+#a.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+#a.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
