@@ -33,6 +33,11 @@ class AddressBook
         # puts entries.size
     end
     
+    # gets rid of all the entries in the database
+    def nuke_entries
+        entries.clear
+    end
+    
     def import_from_csv(file_name)
         # Implementation goes here
         csv_text = File.read(file_name)
