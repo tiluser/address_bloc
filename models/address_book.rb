@@ -41,7 +41,6 @@ class AddressBook
         csv.each do |row|
             row_hash= row.to_hash
             add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
-            puts row_hash["name"]
         end
     end
  
@@ -71,6 +70,22 @@ class AddressBook
      return nil
    end
    
+   # Searches AddressBook for a specific entry by name without the binary
+   # search divide-and-conquer strategy
+   def iterative_search(name)
+        lower = 0
+        upper = entries.length - 1
+        test_name = entries[lower].name
+        while lower <= upper
+            test_name = entries[lower].name
+            if name == test_name
+                return entries[lower]
+            else
+                lower += 1
+            end
+        end
+   end
+   
 end
 
 #a = AddressBook.new
@@ -78,3 +93,4 @@ end
 #a.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
 
 #a.import_from_csv("/home/ubuntu/workspace/address_bloc/entries.csv")
+#puts a.iterative_search("Bill")
